@@ -6,15 +6,15 @@
 
   :javascript
     (function() {
-      var us_centroid = new google.maps.LatLng(37.09024,-95.712891);
-      var tableId = "1c4TAG-E7o-GJIRBUON-onVtLVft5IAr82mdqj7M"; // Open Data
-      //var tableId = "1141224"
+      var us_centroid = new google.maps.LatLng(40.413496,-88.979919);
+      var tableId = "1QPBBx13LeWLlTh9WesUleaQ-zf9zWLToU-zRWM4"; // Open Data
+      //var tableId = "4902990"
       var filters = [
         {"City Search":  {columns: ["city"],  type: "text"}},
         {"State Search": {columns: ["state"], type: "text"}}
       ];
 
-      map = new Fusion.Map("template_map", {center: us_centroid, zoom: 4, mapTypeControl: true});
+      map = new Fusion.Map("template_map", {center: us_centroid, zoom: 6, mapTypeControl: true});
       var layer = map.layers.create({select: "geometry", from: tableId});
       map.present();
 
